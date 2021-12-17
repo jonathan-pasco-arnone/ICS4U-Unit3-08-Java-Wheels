@@ -20,6 +20,11 @@ public class Vehicle {
     protected int speed;
 
     /**
+    * The quantity of wheels.
+    */
+    protected int quantityWheels;
+
+    /**
     * The colour of the vehicle.
     */
     private String colour;
@@ -34,11 +39,14 @@ public class Vehicle {
     *
     * @param startColour the starting colour
     * @param vehicleMaxSpeed the maximum speed of the car
+    * @param initialQuantityWheels the starting quantity of wheels
     */
-    public Vehicle(final String startColour, final int vehicleMaxSpeed) {
+    public Vehicle(final String startColour, final int vehicleMaxSpeed,
+                   final int initialQuantityWheels) {
         colour = startColour;
         speed = 0;
         maxSpeed = vehicleMaxSpeed;
+        quantityWheels = initialQuantityWheels;
     }
 
     /*

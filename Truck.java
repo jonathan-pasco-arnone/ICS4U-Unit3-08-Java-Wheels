@@ -21,12 +21,23 @@ public class Truck extends Vehicle {
     * @param startColour the original colour of the truck
     * @param startMaxSpeed the maximum speed the vehicle hcan go
     * @param startLicensePlate the original license plate of the truck
+    * @param inititalQuantityWheels the initial amount of wheels
     */
     public Truck(final String startColour, final int startMaxSpeed,
-                 final String startLicensePlate) {
-        super(startColour, startMaxSpeed);
+                 final String startLicensePlate,
+                 final int inititalQuantityWheels) {
+        super(startColour, startMaxSpeed, inititalQuantityWheels);
         licensePlate = startLicensePlate;
         super.speed = 0;
+    }
+
+    /**
+    * Gets the number of wheels.
+    *
+    * @return gets the number of wheels
+    */
+    public int getQuantityWheels() {
+        return super.quantityWheels;
     }
 
     /**

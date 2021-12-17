@@ -32,28 +32,25 @@ final class Main {
     * @param args this will not be used
     */
     public static void main(final String[] args) {
+        // Variables/Constants
+        final int three = 3;
+        final int twelve = 12;
 
-        final int five = 5;
-        final int fifty = 50;
-        final int oneHundred = 100;
+        final String wheels = " wheels.";
 
-        final Truck cheif = new Truck("Blue", 210, "BAZINGA");
-        final Bicycle zeus = new Bicycle("Red", 30);
+        final Truck cheif = new Truck("Blue", 210, "BAZINGA", 4);
+        final Bicycle zeus = new Bicycle("Red", 30, 2);
 
-        cheif.accelerate(oneHundred);
-        System.out.println("\nChief (the truck's name) has accelerated to "
-                           + "a speed of " + cheif.getSpeed());
-        cheif.provideAir(five);
+        System.out.println("\nChief (the truck's name) has "
+                           + cheif.getQuantityWheels() + wheels);
 
-        System.out.println("Chief has used his air brakes to a degree of 5 "
-                           + "and now has a speed of " + cheif.getSpeed());
+        System.out.println("\nZeus (the bike's name) has "
+                           + zeus.getQuantityWheels() + wheels);
 
-        System.out.println("\nZeus (the bike's name) has a max speed of "
-                           + zeus.getMaxSpeed());
-        System.out.println("Zeus is attempting to accelerate to 50");
-        zeus.accelerate(fifty);
-
-        System.out.println("\nZeus is about to be rung...");
-        zeus.ringBell();
+        zeus.accelerate(twelve);
+        System.out.println("\nZeus has accelerated to " + zeus.getSpeed());
+        zeus.brake(three);
+        System.out.println("Zeus has had its speed lowered to "
+                           + zeus.getSpeed());
     }
 }
